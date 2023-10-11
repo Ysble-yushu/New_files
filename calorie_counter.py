@@ -41,12 +41,3 @@ def meals(*args):
                 print(f"KeyError: {item} not found in calories and combos")
     print(f"Total calories:{total}")
     return total
-
-
-meals_1 = ["Hamburger", "Cheese Burger","Nonexistent Food"]
-meals_2 = ['Hamburger', "Cheesy Combo"]
-result = meals(meals_1, meals_2)
-
-print(result)
-
-    
