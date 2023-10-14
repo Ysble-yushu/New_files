@@ -1,10 +1,13 @@
 import json
-with open("data/data.json") as file:
-    data = json.load(file)
-    meals = data.get('meals', {})
-    combos = data.get('combos', {})
 
+with open ("meals.json") as f:
+    data = json.load(f)
 
+with open("combos.json") as f:
+    data = json.load(f)
+
+meals = data["meals"]
+combos = data["combos"]
 
 def calories_counter(*items):
     total = 0
