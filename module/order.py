@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from module.exceptions import exceptions
-from module.complex_data import complex_data
+from module.exceptions import MealTooBigError, InvalidItemId
+from module.menu import calories_counter, prices_counter
 
 class Order:
     """
