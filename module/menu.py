@@ -20,7 +20,7 @@ def calories_counter(*items):
             print(f"{item} not in menu")
     return total
 
-def price_calorie_counter(*items):
+def prices_counter(*items):
     total = 0
     for item in items:
         if item in meals.keys():
