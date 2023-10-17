@@ -1,8 +1,5 @@
 #test function.py
 
-import sys
-sys.path.append("/path/to/your/module")
-
 from unittest import TestCase
 
 from module.exceptions import MealTooBigError, InvalidItemId
