@@ -1,6 +1,15 @@
-from unittest import TestCase
 
-from module.order import Order
+
+import shutil
+import os
+
+source_folder = 'C:/Users/Quinn/Desktop/py/New_files/path/to/module/folder'
+destination_folder = 'C:/Users/Quinn/Desktop/py/New_files/path/to/test/folder'
+
+file_to_copy = 'order.py'
+source_file_path = os.path.join(source_folder, file_to_copy)
+destination_file_path = os.path.join(destination_folder, file_to_copy)
+shutil.copy(source_file_path, destination_file_path)
 
 class OrderTestCase(TestCase):
     def test_order_id_is_increment(self):
