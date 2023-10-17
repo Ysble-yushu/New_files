@@ -37,8 +37,12 @@ class Order:
         self.items = items
         self._calories = None
         self._price = None
+
         try:
-            self._calories
+            self._calories = calories_counter(self.items)
+            self._price = prices_counter(self.items)
+            self.order_accepted = True
+            self.order_refused_reason = None
         except (InvalidItemId, MealTooBigError) as e:
             self.order_accepted = False
             self.order_refused_reason = e.message
@@ -52,11 +56,12 @@ class Order:
     @property
     def calories(self):
         if self._calories is None:
-            self._calories = calorie_counter(self.items)
+            self._calories = calories_counter(self.items)
         return self._calories
 
     @property
     def price(self):
         if self._price is None:
-            self._price = price_counter(self.items)
+            self._price = prices_counter(self.items)
         return self._price
+        
